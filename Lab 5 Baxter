@@ -149,7 +149,6 @@ BEGIN GPL
 END GPL.
 
 
-
 EXAMINE VARIABLES=RESID_1
   /PLOT BOXPLOT HISTOGRAM NPPLOT
   /COMPARE GROUPS
@@ -352,7 +351,7 @@ MIXED Pain_restruct WITH female age STAI_trait pain_cat cortisol_serum mindfulne
     time_center time_center_sq
   /CRITERIA=DFMETHOD(SATTERTHWAITE) CIN(95) MXITER(100) MXSTEP(10) SCORING(1) 
     SINGULAR(0.000000000001) HCONVERGE(0, ABSOLUTE) LCONVERGE(0, ABSOLUTE) PCONVERGE(0.000001, ABSOLUTE)    
-  /FIXED=Sex_dum age STAI_trait pain_cat cortisol_serum mindfulness time_centered 
+  /FIXED=Sex_dum age STAI_trait pain_cat cortisol_serum mindfulness time_center 
     time_center_sq | SSTYPE(3)
   /METHOD=REML
   /PRINT=CORB  SOLUTION
